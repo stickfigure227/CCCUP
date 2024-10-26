@@ -119,7 +119,9 @@ function loadccCUPDetails(masterDiv, reason) {
 }
 function saveCUP(a) {
   if (a === 0) {
-    CC.push('Regular dental check-up');
+    if (!CC.includes('Regular dental check-up')) {
+      CC.push('Regular dental check-up');
+    }
   }
   if (a === 1) {
     const ccCupDetailsDiv = document.getElementById('ccCupDetailsDiv');

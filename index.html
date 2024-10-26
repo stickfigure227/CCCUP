@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chief Complaint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="special.css">
+  </head>
+  <body id="body">
+    <button id="loadDiv" class="rectButtonLong whiteButton" onclick="loadContent('masterDiv')"><p>Load the content</p></button>
+    <div id="masterDiv" style="display: none;">
+    </div>
+    <script>
+      window.onload = function() {
+        loadContent('masterDiv')
+      }
+      function loadContent(masterDiv) {
+        document.getElementById('loadDiv').style.display = 'none';
+        document.getElementById('masterDiv').style.display = 'flex';
+        loadCCDiv(masterDiv);
+      }
+    </script>
+    <script src="script.js"></script>
+    <script src="ccMain.js"></script>
+    <script src="ccAdder.js"></script>
+    <script src="sub1/ccCup.js"></script>
+  </body>
+</html>
